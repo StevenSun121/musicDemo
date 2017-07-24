@@ -1,0 +1,57 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>music Demo</title>
+	<link rel="stylesheet" type="text/css" href="build/style.css">
+</head>
+
+<body>
+	<div class="contain">
+		<div class="head">
+			<i class="menu" title="显示歌词"></i>
+			<p></p>
+			<p class="sml"></p>
+		</div>
+		
+		<div class="player">
+			<div class="range">
+				<i class="vol"></i>
+				<input id="volume" type="range" min="0" max="100" step="1">
+				<label class="nowVol"></label>
+			</div>
+			<div class="play-lf">
+				<i class="lf"></i>
+			</div>
+			<div class="play-ct">
+				<div class="play-hd" id="play">
+					<img src="build/head.png">
+					<i id="play-pause" class="stop" title="播放"></i>
+				</div>
+				<audio id="audio" src=""></audio>
+			</div>
+			<div class="play-rt">
+				<i class="rt"></i>
+			</div>
+			<div class="range">
+				<label class="currentTime"></label>
+				<input id="time" type="range">
+				<label class="duration"></label>
+			</div>
+		</div>
+		<s class="line"></s>
+		<div class="play-lt" id="lt" style="display: none;"></div>
+		<div class="play-lt" id="lrc" style="display: none;">
+			<div class="lrc"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="build/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="build/musicDemo.js"></script>
+
+</body>
+
+</html>

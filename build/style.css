@@ -1,0 +1,111 @@
+/* CSS Document */
+body,div,ol,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,form,fieldset,legend,input,button{ margin:0; padding:0; -webkit-tap-highlight-color:rgba(255,255,255,0); }
+html {  width: 100%; font-family: 'Heiti SC', 'Microsoft YaHei'; font-size: 100px; outline: 0; -webkit-text-size-adjust:none;}
+body {  width:100%; margin: 0; -webkit-user-select: none; position: relative; background-color:#fff; color:#fff;}
+a:hover,a:link,a:visited,a{ color:inherit; text-decoration:none;}
+ul,li{list-style:none}
+i{font-style:normal}
+.contain{ width:300px; height:auto; background:url(Background.png) no-repeat; background-size:100% 100%; overflow:hidden;}
+/*473*/
+
+.head{ position:relative; width:300px; height:40px; padding-top:10px; text-align:center; overflow:hidden;}
+.head i.menu{ position:absolute; display:block; width:25px; height:25px; margin:6px 0 0 16px; background:url(Menu.png) no-repeat; background-size:25px 25px;}
+.head p.sml{ font-size:14px;}
+.head p{font-size:15px;}
+
+.player{ width:300px; height:150px; overflow:hidden;}
+.player .play-lf,.player .play-rt{ position:relative; float:left; width:75px; height:110px; overflow:hidden;}
+.player .play-lf i.lf{ position:absolute; top:43px; left:30px; display:block; width:47px; height:24px; background:url(pre.png) no-repeat; background-size:47px 24px;}
+.player .play-rt i.rt{ position:absolute; top:43px; right:30px; display:block; width:47px; height:24px; background:url(next.png) no-repeat; background-size:47px 24px;}
+.player .play-ct{ float:left; width:150px; height:110px; overflow:hidden;}
+.player .play-ct .play-hd{ position:relative; display:block; width:150px; height:110px;}
+.player .play-ct .play-hd img{ position:absolute; top:10px; left:30px;}
+.player .play-ct .play-hd i.begin{ position:absolute; top:40px; left:60px; display:block; width:30px; height:30px; background:url(begin.png) no-repeat; background-size:30px 30px; cursor:pointer; z-index:9999;}
+.player .play-ct .play-hd i.stop{ position:absolute; top:40px; left:60px; display:block; width:30px; height:30px; background:url(stop.png) no-repeat; background-size:30px 30px; cursor:pointer; z-index:9999;}
+
+.range{height: 20px; position: relative; float: left; width: 300px;}
+.range .vol{width:30px; height:24px;position: absolute; top: 3px; left: 40px; background:url(volume.png) no-repeat; background-size:25px 20px; cursor:pointer;}
+.range .novol{width:30px; height:24px;position: absolute; top: 4px; left: 41px; background:url(no_volume.png) no-repeat; background-size:25px 20px; cursor:pointer;}
+.nowVol{font-size: 12px;position: absolute; top: 5px; right: 46px;}
+.currentTime{font-size: 12px;position: absolute; top: -6px; left: 15px;}
+.duration{font-size: 12px;position: absolute; top: -6px; right: 15px;}
+
+.line{ display:block; width:300px; height:18px; background:url(line.png) no-repeat; background-size:300px 25px;}
+
+.play-lt{ width:305px; height:255px; overflow-y:auto; overflow-x:hidden;}
+.play-lt .lt{ width:300px; height:50px; border-bottom:1px solid; border-color:rgba(255,255,255,.1); cursor:pointer;}
+.play-lt .lt p{ float:left;}
+.play-lt .lt p.num{ width:75px; text-align:center; font-size:20px; line-height:50px;}
+.play-lt .lt p.name{ width:215px; margin-top:8px;}
+.play-lt .lt p.name span.big{ width:215px; font-size:15px; display:block;}
+.play-lt .lt p.name span.sm{ width:215; font-size:12px; display:block;}
+.play-lt .lt p.time{ width:40px; font-size:10px; line-height:50px;}
+.play-lt .act{ background-color:rgba(0,0,0,.1);}
+
+.play-lt .lrc{ width:300px; margin-top: 108px;}
+.play-lt .lrc p{ width:300px; font-size:14px; text-align: center; line-height: 31px;}
+.play-lt .lrc .act{ color: #18c2f5; font-size:18px;}
+
+.play-lt .cbdb{ border-bottom:none;}
+
+#progress{ position:absolute; top:15px; left:15px; z-index:999;}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 5px;  
+    height: 16px;  
+    background-color: #F5F5F5;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 10px;  
+    background-color: #F5F5F5;  
+}  
+  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #555;  
+}  
+/* 定义range 样式 */
+input[type=range]{
+    -webkit-appearance: none;
+    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+    background: -webkit-linear-gradient(#059CFA, #059CFA) no-repeat;
+    background-size: 0% 100%;
+}
+#volume {
+    width: 150px;
+    margin: 10px 75px 0 75px;
+}
+#time {
+    width: 200px;
+    margin: 0px 50px 10px 50px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+} 
+input[type=range]::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 10px; /*将轨道设为圆角的*/
+    box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    margin-top: -2px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #ffffff; 
+    border-radius: 50%; /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+    box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}

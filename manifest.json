@@ -1,0 +1,25 @@
+{
+   "manifest_version": 2,
+   "name": "musicDemo",
+   "default_locale": "zh_CN",
+   "offline_enabled": true,
+   "version": "1.0.0",
+   "description": "公司网络限制不让听歌，所以写了个小Demo，自用  BY StevenSun",
+   "icons": {
+        "16": "logo-16.png",
+        "48": "logo-48.png",
+        "128": "logo-128.png"
+    },
+   "browser_action": {
+        "default_icon": "logo-16.png",
+        "default_title": "music Demo",
+        "default_popup" : "main.html"
+    },
+    "permissions": [
+        "notifications"
+    ],
+    "background" : {
+        "page" : "music.html"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://ss3.baidu.com/ https://ss2.baidu.com/ https://ss1.baidu.com/ https://ss0.baidu.com/; object-src 'self'"
+}
